@@ -5,9 +5,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3010,
+    allowedHosts: ['1337.plus'], // Corrected to an array of hostnames
     proxy: {
       '/api': {
-        target: 'http://localhost:7331', // Replace with your backend URL
+        target: 'https://api.1337.plus', // Backend URL
         changeOrigin: true,
         secure: false
       }

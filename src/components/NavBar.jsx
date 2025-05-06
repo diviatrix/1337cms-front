@@ -13,10 +13,10 @@ function NavBar() {
   return (
     <nav className="bg-gray-800 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">CMS</div>
+        <div className="text-white text-lg font-bold">1337+</div>
         <div className="flex items-center space-x-4">
           {token && user && (
-            <span className="text-white font-medium">Welcome, {user.username}</span>
+            <span className="text-white font-medium">Hi, {user.username}</span>
           )}
           {!token ? (
             <button

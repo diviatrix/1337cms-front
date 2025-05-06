@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import PostList from '../components/PostList.jsx';
-import { fetchPosts } from '../utils/api.js';
+import { posts as fetchApiPosts } from '../utils/api.js';
+import { messages } from '../data/messages.js';
 
 function Index() {
   const [posts, setPosts] = useState([]);
@@ -10,7 +11,7 @@ function Index() {
   useEffect(() => {
     const loadPosts = async () => {
       try {
-        const data = await fetchPosts();
+        const data = await fetchApiPosts();
         setPosts(data);
         setLoading(false);
       } catch (err) {
@@ -23,7 +24,7 @@ function Index() {
 
   return (
     <div className="max-w-4xl mx-auto mt-10 px-4">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Latest Posts</h2>
+      <h2 className="text-2xl font-bold mb-6 text-gray-800">{messages.posts_latest}</h2>
       <PostList posts={posts} loading={loading} error={error} />
     </div>
   );

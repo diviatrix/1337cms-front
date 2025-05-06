@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const API_URL = '/api/auth';
+const API_URL = '/api';
 
 export const login = async (username, password) => {
   try {
-    const response = await axios.post(`${API_URL}/login`, { username, password });
+    const response = await axios.post(`${API_URL}/auth/login`, { username, password });
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -13,14 +13,32 @@ export const login = async (username, password) => {
 
 export const register = async (username, password, email) => {
   try {
-    const response = await axios.post(`${API_URL}/register`, { username, password, email });
+    const response = await axios.post(`${API_URL}/auth/register`, { username, password, email });
     return response.data;
   } catch (error) {
     throw error.response.data;
   }
 };
 
-export const fetchPosts = async () => {
+export const db = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/db`);
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+}
+
+export const auth = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/auth`);
+        return response.data;
+    } catch (error) {
+        throw error.response.data;
+    }
+}
+
+export const posts = async () => {
   try {
     // Mock CMS-like data until a real posts API is provided
     return [

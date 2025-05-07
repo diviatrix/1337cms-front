@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
-import Index from './pages/Index.jsx'; // Corrected case
+import Index from './pages/Index.jsx';
 import Auth from './pages/Auth.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 

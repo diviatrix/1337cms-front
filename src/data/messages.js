@@ -4,6 +4,17 @@ export const messages = {
     "user_btn_login": "Login / Register",
     "user_btn_profile": "Profile",
     "user_btn_settings": "Settings",
-    "user_btn_logout": "Logout"
+    "user_btn_logout": "Logout",
+    "posts_loading": "Loading posts...",
+    "auth_login": "Login",
+    "auth_register": "Register",
+    "auth_email_prompt": "Enter your email",
+    "auth_email": "Email",
+    "auth_password_prompt": "Enter your password",
+    "auth_password": "Password:",
+    "auth_username_prompt": "Enter your username",
+    "auth_username": "Username:",
+    "auth_login_fail": "Login failed",
+    "auth_register_fail": "Registration failed",
 
 };

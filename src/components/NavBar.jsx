@@ -15,7 +15,10 @@ function NavBar() {
   return (
     <nav className="bg-green-500 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">{config.name}</div>
+        <div className="text-white text-lg font-bold"><a href="/">{config.name}</a></div>
+        <div className='img'>
+          <img src={config.logo} alt={config.logo_alt} className="h-10 w-10 rounded-full" />
+        </div>
         <div className="flex items-center space-x-4">
           {token && user && (
             <span className="text-white font-medium">{messages.user_hello} {user.username}</span>

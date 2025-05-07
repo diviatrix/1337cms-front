@@ -1,5 +1,7 @@
+import { messages } from "../data/messages";
+
 function PostList({ posts, loading, error }) {
-    if (loading) return <p>Loading posts...</p>;
+    if (loading) return <p>{messages.posts_loading}</p>;
     if (error) return <p className="text-red-500">{error}</p>;
   
     return (

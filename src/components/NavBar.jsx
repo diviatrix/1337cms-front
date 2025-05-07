@@ -50,6 +50,12 @@ function NavBar() {
                 {messages.user_btn_settings}
               </button>
               <button
+                onClick={() => navigate('/admin')}
+                className="bg-yellow-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
+              >
+                {messages.user_btn_admin}
+              </button>
+              <button
                 onClick={handleLogout}
                 className="bg-cyan-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
               >

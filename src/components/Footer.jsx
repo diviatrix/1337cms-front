@@ -3,7 +3,7 @@ import { config } from '../data/config.js';
 
 function Footer() {
     return (
-        <footer className="bg-gray-700 text-white text-small py-1 mt-8">
+        <footer className="left-0 w-full bg-gray-600 text-white text-small py-1">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap -mx-4">
                     {/* Left Column - Icons */}
@@ -42,4 +42,4 @@ export default Footer;
 // Left column: Social media icons.
 // Center column: Placeholder text.
 // Right column: Site description and copyright information.
-// The footer has a dark background and white text.
+// The footer has a dark background, white text, and is fixed at the bottom of the viewport.

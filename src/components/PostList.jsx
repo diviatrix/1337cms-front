@@ -13,6 +13,7 @@ function PostList({ posts, loading, error }) {
             <p className="text-sm text-gray-500 mt-2">By {post.author} on {post.date}</p>
           </div>
         ))}
+        {posts.length === 0 && <p className="text-gray-500">No posts available.</p>}
       </div>
     );
   }

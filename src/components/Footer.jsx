@@ -3,7 +3,7 @@ import { config } from '../data/config.js';
 
 function Footer() {
     return (
-        <footer className="bg-gray-700 text-white text-small py-1 fixed bottom-0 left-0 right-0">
+        <footer className="bg-gray-700 text-white text-small py-1 mt-8">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap -mx-4">
                     {/* Left Column - Icons */}

@@ -26,7 +26,7 @@ function NewPost() {
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="blocktext-gray-700">Content:</label>
+                    <label className="blocktext-gray-700">{messages.post_content}:</label>
                     <textarea
                         value={content}
                         onChange={e => setContent(e.target.value)}
@@ -35,7 +35,7 @@ function NewPost() {
                     />
                 </div>
                 <div className="space-y-0">
-                    <label className="blockfont-medium text-gray-700">Category:</label>
+                    <label className="blockfont-medium text-gray-700">{messages.post_category}: </label>
                     <select className="flex items-center w-full px-0.5 py-0 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                         <option value="tech">Technology</option>
                         <option value="lifestyle">Lifestyle</option>
@@ -43,7 +43,7 @@ function NewPost() {
                     </select>
                 </div>
                 <div className="space-y-0">
-                    <label className="block text-gray-700">Tags:</label>
+                    <label className="block text-gray-700">{messages.post_tags}:</label>
                     <input
                         type="text"
                         placeholder="Add tags separated by commas"

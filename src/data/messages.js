@@ -1,5 +1,11 @@
 export const messages = {
     "posts_latest": "Latest Posts",
+    "post_category": "Category",
+    "post_content": "Content",
+    "post_tags": "Tags",
+    "post_img_url": "Thumbnail URL",
+    "post_by": "By",
+    "post_date": "On",
     "user_hello": "Hi,",
     "user_btn_login": "Login / Register",
     "user_btn_profile": "Profile",

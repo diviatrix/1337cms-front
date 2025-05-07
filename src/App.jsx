@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx';
+import Footer from './components/Footer.jsx';
 import Index from './pages/Index.jsx';
 import Auth from './pages/Auth.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
@@ -15,6 +16,7 @@ function App() {
           {/* <Route path="/admin" element={<Admin />} /> */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <Footer /> {/* Added Footer component */}
       </div>
     </AuthProvider>
   );

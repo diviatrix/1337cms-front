@@ -16,5 +16,15 @@ export const messages = {
     "auth_username": "Username:",
     "auth_login_fail": "Login failed",
     "auth_register_fail": "Registration failed",
+    "links_follow_message": "Our Socials",
+    "links_follow_1": "Telegram",
+    "links_follow_1_link": "https://t.me/leet_plus",
+    "links_follow_1_icon": "/telegram-icon.png",
+    "links_follow_1_icon_alt": "Telegram",
+    "links_follow_2": "Youtube",
+    "links_follow_2_link": "https://www.youtube.com/@leetplus",
+    "links_follow_2_icon": "/youtube-icon.png",
+    "links_follow_2_icon_alt": "Youtube",
+    "footer_text": "Check out our youtube and telegram first, these are most active!"
 
 };

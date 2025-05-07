@@ -13,20 +13,25 @@ function NavBar() {
   };
 
   return (
-    <nav className="bg-green-500 p-4 shadow-lg">
+    <nav className="bg-green-500 p-2 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold"><a href="/">{config.name}</a></div>
-        <div className='img'>
-          <img src={config.logo} alt={config.logo_alt} className="h-10 w-10 rounded-full" />
+        {/* Left side: Logo and Site Name */}
+        <div className="flex items-center space-x-3">
+          <a href="/" className="flex items-center space-x-2 space-y-0">
+            <img src={config.logo} alt={config.logo_alt} className="h- w-8 rounded-full" />
+          </a>
+          <a href="/" className="text-white text-md font-bold">{config.name}</a>
         </div>
-        <div className="flex items-center space-x-4">
+
+        {/* Right side: User info and buttons */}
+        <div className="flex items-center space-x-3">
           {token && user && (
-            <span className="text-white font-medium">{messages.user_hello} {user.username}</span>
+            <span className="text-white font-medium text-sm">{messages.user_hello} {user.username}</span>
           )}
           {!token ? (
             <button
               onClick={() => navigate('/auth')}
-              className="bg-blue-500 text-white px-2 py-0 rounded hover:bg-pink-400 transition duration-200"
+              className="bg-blue-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
             >
               {messages.user_btn_login}
             </button>
@@ -34,19 +39,19 @@ function NavBar() {
             <>
               <button
                 onClick={() => alert('Profile clicked')}
-                className="bg-yellow-500 text-white px-2 py-0 rounded hover:bg-pink-400 transition duration-200"
+                className="bg-yellow-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
               >
                 {messages.user_btn_profile}
               </button>
               <button
                 onClick={() => alert('Settings clicked')}
-                className="bg-yellow-500 text-white px-2 py-0 rounded hover:bg-pink-400 transition duration-200"
+                className="bg-yellow-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
               >
                 {messages.user_btn_settings}
               </button>
               <button
                 onClick={handleLogout}
-                className="bg-cyan-500 text-white px-2 py-0 rounded hover:bg-pink-400 transition duration-200"
+                className="bg-cyan-500 text-white px-2 py-1 text-sm rounded hover:bg-pink-400 transition duration-200"
               >
                 {messages.user_btn_logout}
               </button>
